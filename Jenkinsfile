@@ -13,5 +13,9 @@ stages {
       // git branch: 'main', url: 'https://github.com/Vikash101195/tweet-trend-new.git'
       }
     }
+
+    stage('Maven Build'){
+        sh 'mvn clean deploy'
+    }
 }
 }
