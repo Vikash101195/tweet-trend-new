@@ -12,7 +12,9 @@ stages {
       // git branch: 'main', url: 'https://github.com/Vikash101195/tweet-trend-new.git'
       }
     }
-
+    environment {
+    PATH = "/opt/apache-maven-3.9.2/bin:$PATH"
+}
     stage('Maven Build'){
         steps{
         sh 'mvn clean deploy'
